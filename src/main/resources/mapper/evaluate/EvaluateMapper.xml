@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="eac.core.evaluate.mapper.EvaluateMapper">
+  <resultMap id="BaseResultMap" type="eac.core.evaluate.model.Evaluate">
+    <result column="E_ID" jdbcType="VARCHAR" property="eId" />
+    <result column="E_CID" jdbcType="VARCHAR" property="eCid" />
+    <result column="E_UID" jdbcType="VARCHAR" property="eUid" />
+    <result column="E_EVID" jdbcType="VARCHAR" property="eEvid" />
+    <result column="E_SCORE" jdbcType="VARCHAR" property="eScore" />
+    <result column="E_COMMENT" jdbcType="VARCHAR" property="eComment" />
+    <result column="E_TIME" jdbcType="TIMESTAMP" property="eTime" />
+    <result column="E_FABULOUS" jdbcType="VARCHAR" property="eFabulous" />
+    <result column="E_UNFABULOUS" jdbcType="VARCHAR" property="eUnfabulous" />
+    <result column="E_DELETE_TIME" jdbcType="TIMESTAMP" property="eDeleteTime" />
+    <result column="E_EFFECTIVE" jdbcType="VARCHAR" property="eEffective" />
+    <result column="ATTRIBUTE1" jdbcType="VARCHAR" property="attribute1" />
+    <result column="ATTRIBUTE2" jdbcType="VARCHAR" property="attribute2" />
+    <result column="ATTRIBUTE3" jdbcType="VARCHAR" property="attribute3" />
+    <result column="ATTRIBUTE4" jdbcType="VARCHAR" property="attribute4" />
+    <result column="ATTRIBUTE5" jdbcType="VARCHAR" property="attribute5" />
+    <result column="ATTRIBUTE6" jdbcType="VARCHAR" property="attribute6" />
+    <result column="ATTRIBUTE7" jdbcType="VARCHAR" property="attribute7" />
+    <result column="ATTRIBUTE8" jdbcType="VARCHAR" property="attribute8" />
+    <result column="ATTRIBUTE9" jdbcType="VARCHAR" property="attribute9" />
+    <result column="ATTRIBUTE10" jdbcType="VARCHAR" property="attribute10" />
+    <result column="ATTRIBUTE11" jdbcType="VARCHAR" property="attribute11" />
+    <result column="ATTRIBUTE12" jdbcType="VARCHAR" property="attribute12" />
+    <result column="ATTRIBUTE13" jdbcType="VARCHAR" property="attribute13" />
+    <result column="ATTRIBUTE14" jdbcType="VARCHAR" property="attribute14" />
+    <result column="ATTRIBUTE15" jdbcType="VARCHAR" property="attribute15" />
+  </resultMap>
+  <insert id="insert" parameterType="eac.core.evaluate.model.Evaluate">
+    insert into EVALUATE (E_ID, E_CID, E_UID, 
+      E_EVID, E_SCORE, E_COMMENT, 
+      E_TIME, E_FABULOUS, E_UNFABULOUS, 
+      E_DELETE_TIME, E_EFFECTIVE, ATTRIBUTE1, 
+      ATTRIBUTE2, ATTRIBUTE3, ATTRIBUTE4, 
+      ATTRIBUTE5, ATTRIBUTE6, ATTRIBUTE7, 
+      ATTRIBUTE8, ATTRIBUTE9, ATTRIBUTE10, 
+      ATTRIBUTE11, ATTRIBUTE12, ATTRIBUTE13, 
+      ATTRIBUTE14, ATTRIBUTE15)
+    values (#{eId,jdbcType=VARCHAR}, #{eCid,jdbcType=VARCHAR}, #{eUid,jdbcType=VARCHAR}, 
+      #{eEvid,jdbcType=VARCHAR}, #{eScore,jdbcType=VARCHAR}, #{eComment,jdbcType=VARCHAR}, 
+      #{eTime,jdbcType=TIMESTAMP}, #{eFabulous,jdbcType=VARCHAR}, #{eUnfabulous,jdbcType=VARCHAR}, 
+      #{eDeleteTime,jdbcType=TIMESTAMP}, #{eEffective,jdbcType=VARCHAR}, #{attribute1,jdbcType=VARCHAR}, 
+      #{attribute2,jdbcType=VARCHAR}, #{attribute3,jdbcType=VARCHAR}, #{attribute4,jdbcType=VARCHAR}, 
+      #{attribute5,jdbcType=VARCHAR}, #{attribute6,jdbcType=VARCHAR}, #{attribute7,jdbcType=VARCHAR}, 
+      #{attribute8,jdbcType=VARCHAR}, #{attribute9,jdbcType=VARCHAR}, #{attribute10,jdbcType=VARCHAR}, 
+      #{attribute11,jdbcType=VARCHAR}, #{attribute12,jdbcType=VARCHAR}, #{attribute13,jdbcType=VARCHAR}, 
+      #{attribute14,jdbcType=VARCHAR}, #{attribute15,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="eac.core.evaluate.model.Evaluate">
+    insert into EVALUATE
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="eId != null">
+        E_ID,
+      </if>
+      <if test="eCid != null">
+        E_CID,
+      </if>
+      <if test="eUid != null">
+        E_UID,
+      </if>
+      <if test="eEvid != null">
+        E_EVID,
+      </if>
+      <if test="eScore != null">
+        E_SCORE,
+      </if>
+      <if test="eComment != null">
+        E_COMMENT,
+      </if>
+      <if test="eTime != null">
+        E_TIME,
+      </if>
+      <if test="eFabulous != null">
+        E_FABULOUS,
+      </if>
+      <if test="eUnfabulous != null">
+        E_UNFABULOUS,
+      </if>
+      <if test="eDeleteTime != null">
+        E_DELETE_TIME,
+      </if>
+      <if test="eEffective != null">
+        E_EFFECTIVE,
+      </if>
+      <if test="attribute1 != null">
+        ATTRIBUTE1,
+      </if>
+      <if test="attribute2 != null">
+        ATTRIBUTE2,
+      </if>
+      <if test="attribute3 != null">
+        ATTRIBUTE3,
+      </if>
+      <if test="attribute4 != null">
+        ATTRIBUTE4,
+      </if>
+      <if test="attribute5 != null">
+        ATTRIBUTE5,
+      </if>
+      <if test="attribute6 != null">
+        ATTRIBUTE6,
+      </if>
+      <if test="attribute7 != null">
+        ATTRIBUTE7,
+      </if>
+      <if test="attribute8 != null">
+        ATTRIBUTE8,
+      </if>
+      <if test="attribute9 != null">
+        ATTRIBUTE9,
+      </if>
+      <if test="attribute10 != null">
+        ATTRIBUTE10,
+      </if>
+      <if test="attribute11 != null">
+        ATTRIBUTE11,
+      </if>
+      <if test="attribute12 != null">
+        ATTRIBUTE12,
+      </if>
+      <if test="attribute13 != null">
+        ATTRIBUTE13,
+      </if>
+      <if test="attribute14 != null">
+        ATTRIBUTE14,
+      </if>
+      <if test="attribute15 != null">
+        ATTRIBUTE15,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="eId != null">
+        #{eId,jdbcType=VARCHAR},
+      </if>
+      <if test="eCid != null">
+        #{eCid,jdbcType=VARCHAR},
+      </if>
+      <if test="eUid != null">
+        #{eUid,jdbcType=VARCHAR},
+      </if>
+      <if test="eEvid != null">
+        #{eEvid,jdbcType=VARCHAR},
+      </if>
+      <if test="eScore != null">
+        #{eScore,jdbcType=VARCHAR},
+      </if>
+      <if test="eComment != null">
+        #{eComment,jdbcType=VARCHAR},
+      </if>
+      <if test="eTime != null">
+        #{eTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="eFabulous != null">
+        #{eFabulous,jdbcType=VARCHAR},
+      </if>
+      <if test="eUnfabulous != null">
+        #{eUnfabulous,jdbcType=VARCHAR},
+      </if>
+      <if test="eDeleteTime != null">
+        #{eDeleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="eEffective != null">
+        #{eEffective,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute1 != null">
+        #{attribute1,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute2 != null">
+        #{attribute2,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute3 != null">
+        #{attribute3,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute4 != null">
+        #{attribute4,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute5 != null">
+        #{attribute5,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute6 != null">
+        #{attribute6,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute7 != null">
+        #{attribute7,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute8 != null">
+        #{attribute8,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute9 != null">
+        #{attribute9,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute10 != null">
+        #{attribute10,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute11 != null">
+        #{attribute11,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute12 != null">
+        #{attribute12,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute13 != null">
+        #{attribute13,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute14 != null">
+        #{attribute14,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute15 != null">
+        #{attribute15,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  
+</mapper>

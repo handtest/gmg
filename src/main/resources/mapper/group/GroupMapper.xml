@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="eac.core.group.mapper.GroupMapper">
+  <resultMap id="BaseResultMap" type="eac.core.group.model.Group">
+    <result column="G_ID" jdbcType="VARCHAR" property="gId" />
+    <result column="G_UID" jdbcType="VARCHAR" property="gUid" />
+    <result column="G_CID" jdbcType="VARCHAR" property="gCid" />
+    <result column="G_NAME" jdbcType="VARCHAR" property="gName" />
+    <result column="G_NUMBER_TOTAL" jdbcType="VARCHAR" property="gNumberTotal" />
+    <result column="G_CURRENT_NUMBER" jdbcType="VARCHAR" property="gCurrentNumber" />
+    <result column="G_CURRENT_APPLY_NUMBER" jdbcType="VARCHAR" property="gCurrentApplyNumber" />
+    <result column="G_TYPE" jdbcType="VARCHAR" property="gType" />
+    <result column="G_RULE" jdbcType="VARCHAR" property="gRule" />
+    <result column="G_LIMIT" jdbcType="VARCHAR" property="gLimit" />
+    <result column="G_RENARD_PUNISHMENT" jdbcType="VARCHAR" property="gRenardPunishment" />
+    <result column="G_CREATE_TIME" jdbcType="TIMESTAMP" property="gCreateTime" />
+    <result column="G_END_TIME" jdbcType="TIMESTAMP" property="gEndTime" />
+    <result column="G_EFFECTIVE" jdbcType="VARCHAR" property="gEffective" />
+    <result column="ATTRIBUTE1" jdbcType="VARCHAR" property="attribute1" />
+    <result column="ATTRIBUTE2" jdbcType="VARCHAR" property="attribute2" />
+    <result column="ATTRIBUTE3" jdbcType="VARCHAR" property="attribute3" />
+    <result column="ATTRIBUTE4" jdbcType="VARCHAR" property="attribute4" />
+    <result column="ATTRIBUTE5" jdbcType="VARCHAR" property="attribute5" />
+    <result column="ATTRIBUTE6" jdbcType="VARCHAR" property="attribute6" />
+    <result column="ATTRIBUTE7" jdbcType="VARCHAR" property="attribute7" />
+    <result column="ATTRIBUTE8" jdbcType="VARCHAR" property="attribute8" />
+    <result column="ATTRIBUTE9" jdbcType="VARCHAR" property="attribute9" />
+    <result column="ATTRIBUTE10" jdbcType="VARCHAR" property="attribute10" />
+    <result column="ATTRIBUTE11" jdbcType="VARCHAR" property="attribute11" />
+    <result column="ATTRIBUTE12" jdbcType="VARCHAR" property="attribute12" />
+    <result column="ATTRIBUTE13" jdbcType="VARCHAR" property="attribute13" />
+    <result column="ATTRIBUTE14" jdbcType="VARCHAR" property="attribute14" />
+    <result column="ATTRIBUTE15" jdbcType="VARCHAR" property="attribute15" />
+  </resultMap>
+  <insert id="insert" parameterType="eac.core.group.model.Group">
+    insert into GROUPING (G_ID, G_UID, G_CID, 
+      G_NAME, G_NUMBER_TOTAL, G_CURRENT_NUMBER, 
+      G_CURRENT_APPLY_NUMBER, G_TYPE, G_RULE, 
+      G_LIMIT, G_RENARD_PUNISHMENT, G_CREATE_TIME, 
+      G_END_TIME, G_EFFECTIVE, ATTRIBUTE1, 
+      ATTRIBUTE2, ATTRIBUTE3, ATTRIBUTE4, 
+      ATTRIBUTE5, ATTRIBUTE6, ATTRIBUTE7, 
+      ATTRIBUTE8, ATTRIBUTE9, ATTRIBUTE10, 
+      ATTRIBUTE11, ATTRIBUTE12, ATTRIBUTE13, 
+      ATTRIBUTE14, ATTRIBUTE15)
+    values (#{gId,jdbcType=VARCHAR}, #{gUid,jdbcType=VARCHAR}, #{gCid,jdbcType=VARCHAR}, 
+      #{gName,jdbcType=VARCHAR}, #{gNumberTotal,jdbcType=VARCHAR}, #{gCurrentNumber,jdbcType=VARCHAR}, 
+      #{gCurrentApplyNumber,jdbcType=VARCHAR}, #{gType,jdbcType=VARCHAR}, #{gRule,jdbcType=VARCHAR}, 
+      #{gLimit,jdbcType=VARCHAR}, #{gRenardPunishment,jdbcType=VARCHAR}, #{gCreateTime,jdbcType=TIMESTAMP}, 
+      #{gEndTime,jdbcType=TIMESTAMP}, #{gEffective,jdbcType=VARCHAR}, #{attribute1,jdbcType=VARCHAR}, 
+      #{attribute2,jdbcType=VARCHAR}, #{attribute3,jdbcType=VARCHAR}, #{attribute4,jdbcType=VARCHAR}, 
+      #{attribute5,jdbcType=VARCHAR}, #{attribute6,jdbcType=VARCHAR}, #{attribute7,jdbcType=VARCHAR}, 
+      #{attribute8,jdbcType=VARCHAR}, #{attribute9,jdbcType=VARCHAR}, #{attribute10,jdbcType=VARCHAR}, 
+      #{attribute11,jdbcType=VARCHAR}, #{attribute12,jdbcType=VARCHAR}, #{attribute13,jdbcType=VARCHAR}, 
+      #{attribute14,jdbcType=VARCHAR}, #{attribute15,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="eac.core.group.model.Group">
+    insert into GROUPING
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="gId != null">
+        G_ID,
+      </if>
+      <if test="gUid != null">
+        G_UID,
+      </if>
+      <if test="gCid != null">
+        G_CID,
+      </if>
+      <if test="gName != null">
+        G_NAME,
+      </if>
+      <if test="gNumberTotal != null">
+        G_NUMBER_TOTAL,
+      </if>
+      <if test="gCurrentNumber != null">
+        G_CURRENT_NUMBER,
+      </if>
+      <if test="gCurrentApplyNumber != null">
+        G_CURRENT_APPLY_NUMBER,
+      </if>
+      <if test="gType != null">
+        G_TYPE,
+      </if>
+      <if test="gRule != null">
+        G_RULE,
+      </if>
+      <if test="gLimit != null">
+        G_LIMIT,
+      </if>
+      <if test="gRenardPunishment != null">
+        G_RENARD_PUNISHMENT,
+      </if>
+      <if test="gCreateTime != null">
+        G_CREATE_TIME,
+      </if>
+      <if test="gEndTime != null">
+        G_END_TIME,
+      </if>
+      <if test="gEffective != null">
+        G_EFFECTIVE,
+      </if>
+      <if test="attribute1 != null">
+        ATTRIBUTE1,
+      </if>
+      <if test="attribute2 != null">
+        ATTRIBUTE2,
+      </if>
+      <if test="attribute3 != null">
+        ATTRIBUTE3,
+      </if>
+      <if test="attribute4 != null">
+        ATTRIBUTE4,
+      </if>
+      <if test="attribute5 != null">
+        ATTRIBUTE5,
+      </if>
+      <if test="attribute6 != null">
+        ATTRIBUTE6,
+      </if>
+      <if test="attribute7 != null">
+        ATTRIBUTE7,
+      </if>
+      <if test="attribute8 != null">
+        ATTRIBUTE8,
+      </if>
+      <if test="attribute9 != null">
+        ATTRIBUTE9,
+      </if>
+      <if test="attribute10 != null">
+        ATTRIBUTE10,
+      </if>
+      <if test="attribute11 != null">
+        ATTRIBUTE11,
+      </if>
+      <if test="attribute12 != null">
+        ATTRIBUTE12,
+      </if>
+      <if test="attribute13 != null">
+        ATTRIBUTE13,
+      </if>
+      <if test="attribute14 != null">
+        ATTRIBUTE14,
+      </if>
+      <if test="attribute15 != null">
+        ATTRIBUTE15,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="gId != null">
+        #{gId,jdbcType=VARCHAR},
+      </if>
+      <if test="gUid != null">
+        #{gUid,jdbcType=VARCHAR},
+      </if>
+      <if test="gCid != null">
+        #{gCid,jdbcType=VARCHAR},
+      </if>
+      <if test="gName != null">
+        #{gName,jdbcType=VARCHAR},
+      </if>
+      <if test="gNumberTotal != null">
+        #{gNumberTotal,jdbcType=VARCHAR},
+      </if>
+      <if test="gCurrentNumber != null">
+        #{gCurrentNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="gCurrentApplyNumber != null">
+        #{gCurrentApplyNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="gType != null">
+        #{gType,jdbcType=VARCHAR},
+      </if>
+      <if test="gRule != null">
+        #{gRule,jdbcType=VARCHAR},
+      </if>
+      <if test="gLimit != null">
+        #{gLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="gRenardPunishment != null">
+        #{gRenardPunishment,jdbcType=VARCHAR},
+      </if>
+      <if test="gCreateTime != null">
+        #{gCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gEndTime != null">
+        #{gEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gEffective != null">
+        #{gEffective,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute1 != null">
+        #{attribute1,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute2 != null">
+        #{attribute2,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute3 != null">
+        #{attribute3,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute4 != null">
+        #{attribute4,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute5 != null">
+        #{attribute5,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute6 != null">
+        #{attribute6,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute7 != null">
+        #{attribute7,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute8 != null">
+        #{attribute8,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute9 != null">
+        #{attribute9,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute10 != null">
+        #{attribute10,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute11 != null">
+        #{attribute11,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute12 != null">
+        #{attribute12,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute13 != null">
+        #{attribute13,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute14 != null">
+        #{attribute14,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute15 != null">
+        #{attribute15,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  
+</mapper>

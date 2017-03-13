@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="eac.core.user.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="eac.core.user.model.User" >
+    <result column="ATTRIBUTE1" property="attribute1" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE2" property="attribute2" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE3" property="attribute3" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE4" property="attribute4" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE5" property="attribute5" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE6" property="attribute6" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE7" property="attribute7" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE8" property="attribute8" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE9" property="attribute9" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE10" property="attribute10" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE11" property="attribute11" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE12" property="attribute12" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE13" property="attribute13" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE14" property="attribute14" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE15" property="attribute15" jdbcType="VARCHAR" />
+    <result column="U_ID" property="uId" jdbcType="VARCHAR" />
+    <result column="U_NAME" property="uName" jdbcType="VARCHAR" />
+    <result column="U_AGE" property="uAge" jdbcType="DECIMAL" />
+    <result column="U_PHONE" property="uPhone" jdbcType="VARCHAR" />
+    <result column="U_MAIL" property="uMail" jdbcType="VARCHAR" />
+    <result column="U_CONSTELLATION" property="uConstellation" jdbcType="VARCHAR" />
+    <result column="U_CITY" property="uCity" jdbcType="VARCHAR" />
+    <result column="U_LOG_IN_TIME" property="uLogInTime" jdbcType="TIMESTAMP" />
+    <result column="U_LOG_IN_LOCATION" property="uLogInLocation" jdbcType="VARCHAR" />
+    <result column="U_JOIN_DATE" property="uJoinDate" jdbcType="TIMESTAMP" />
+    <result column="U_CANCELLATION_TIME" property="uCancellationTime" jdbcType="TIMESTAMP" />
+    <result column="U_SPECIALTY" property="uSpecialty" jdbcType="VARCHAR" />
+    <result column="U_HEAD_PORTRAIT" property="uHeadPortrait" jdbcType="VARCHAR" />
+    <result column="U_AUTOGRAPH" property="uAutograph" jdbcType="VARCHAR" />
+    <result column="U_EFFECTIVE" property="uEffective" jdbcType="DECIMAL" />
+  </resultMap>
+  <insert id="insert" parameterType="eac.core.user.model.User" >
+    insert into PERSON (ATTRIBUTE1, ATTRIBUTE2, ATTRIBUTE3, 
+      ATTRIBUTE4, ATTRIBUTE5, ATTRIBUTE6, 
+      ATTRIBUTE7, ATTRIBUTE8, ATTRIBUTE9, 
+      ATTRIBUTE10, ATTRIBUTE11, ATTRIBUTE12, 
+      ATTRIBUTE13, ATTRIBUTE14, ATTRIBUTE15, 
+      U_ID, U_NAME, U_AGE, U_PHONE, 
+      U_MAIL, U_CONSTELLATION, U_CITY, 
+      U_LOG_IN_TIME, U_LOG_IN_LOCATION, U_JOIN_DATE, 
+      U_CANCELLATION_TIME, U_SPECIALTY, U_HEAD_PORTRAIT, 
+      U_AUTOGRAPH, U_EFFECTIVE)
+    values (#{attribute1,jdbcType=VARCHAR}, #{attribute2,jdbcType=VARCHAR}, #{attribute3,jdbcType=VARCHAR}, 
+      #{attribute4,jdbcType=VARCHAR}, #{attribute5,jdbcType=VARCHAR}, #{attribute6,jdbcType=VARCHAR}, 
+      #{attribute7,jdbcType=VARCHAR}, #{attribute8,jdbcType=VARCHAR}, #{attribute9,jdbcType=VARCHAR}, 
+      #{attribute10,jdbcType=VARCHAR}, #{attribute11,jdbcType=VARCHAR}, #{attribute12,jdbcType=VARCHAR}, 
+      #{attribute13,jdbcType=VARCHAR}, #{attribute14,jdbcType=VARCHAR}, #{attribute15,jdbcType=VARCHAR}, 
+      #{uId,jdbcType=VARCHAR}, #{uName,jdbcType=VARCHAR}, #{uAge,jdbcType=DECIMAL}, #{uPhone,jdbcType=VARCHAR}, 
+      #{uMail,jdbcType=VARCHAR}, #{uConstellation,jdbcType=VARCHAR}, #{uCity,jdbcType=VARCHAR}, 
+      #{uLogInTime,jdbcType=TIMESTAMP}, #{uLogInLocation,jdbcType=VARCHAR}, #{uJoinDate,jdbcType=TIMESTAMP}, 
+      #{uCancellationTime,jdbcType=TIMESTAMP}, #{uSpecialty,jdbcType=VARCHAR}, #{uHeadPortrait,jdbcType=VARCHAR}, 
+      #{uAutograph,jdbcType=VARCHAR}, #{uEffective,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="eac.core.user.model.User" >
+    insert into PERSON
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="attribute1 != null" >
+        ATTRIBUTE1,
+      </if>
+      <if test="attribute2 != null" >
+        ATTRIBUTE2,
+      </if>
+      <if test="attribute3 != null" >
+        ATTRIBUTE3,
+      </if>
+      <if test="attribute4 != null" >
+        ATTRIBUTE4,
+      </if>
+      <if test="attribute5 != null" >
+        ATTRIBUTE5,
+      </if>
+      <if test="attribute6 != null" >
+        ATTRIBUTE6,
+      </if>
+      <if test="attribute7 != null" >
+        ATTRIBUTE7,
+      </if>
+      <if test="attribute8 != null" >
+        ATTRIBUTE8,
+      </if>
+      <if test="attribute9 != null" >
+        ATTRIBUTE9,
+      </if>
+      <if test="attribute10 != null" >
+        ATTRIBUTE10,
+      </if>
+      <if test="attribute11 != null" >
+        ATTRIBUTE11,
+      </if>
+      <if test="attribute12 != null" >
+        ATTRIBUTE12,
+      </if>
+      <if test="attribute13 != null" >
+        ATTRIBUTE13,
+      </if>
+      <if test="attribute14 != null" >
+        ATTRIBUTE14,
+      </if>
+      <if test="attribute15 != null" >
+        ATTRIBUTE15,
+      </if>
+      <if test="uId != null" >
+        U_ID,
+      </if>
+      <if test="uName != null" >
+        U_NAME,
+      </if>
+      <if test="uAge != null" >
+        U_AGE,
+      </if>
+      <if test="uPhone != null" >
+        U_PHONE,
+      </if>
+      <if test="uMail != null" >
+        U_MAIL,
+      </if>
+      <if test="uConstellation != null" >
+        U_CONSTELLATION,
+      </if>
+      <if test="uCity != null" >
+        U_CITY,
+      </if>
+      <if test="uLogInTime != null" >
+        U_LOG_IN_TIME,
+      </if>
+      <if test="uLogInLocation != null" >
+        U_LOG_IN_LOCATION,
+      </if>
+      <if test="uJoinDate != null" >
+        U_JOIN_DATE,
+      </if>
+      <if test="uCancellationTime != null" >
+        U_CANCELLATION_TIME,
+      </if>
+      <if test="uSpecialty != null" >
+        U_SPECIALTY,
+      </if>
+      <if test="uHeadPortrait != null" >
+        U_HEAD_PORTRAIT,
+      </if>
+      <if test="uAutograph != null" >
+        U_AUTOGRAPH,
+      </if>
+      <if test="uEffective != null" >
+        U_EFFECTIVE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="attribute1 != null" >
+        #{attribute1,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute2 != null" >
+        #{attribute2,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute3 != null" >
+        #{attribute3,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute4 != null" >
+        #{attribute4,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute5 != null" >
+        #{attribute5,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute6 != null" >
+        #{attribute6,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute7 != null" >
+        #{attribute7,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute8 != null" >
+        #{attribute8,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute9 != null" >
+        #{attribute9,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute10 != null" >
+        #{attribute10,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute11 != null" >
+        #{attribute11,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute12 != null" >
+        #{attribute12,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute13 != null" >
+        #{attribute13,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute14 != null" >
+        #{attribute14,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute15 != null" >
+        #{attribute15,jdbcType=VARCHAR},
+      </if>
+      <if test="uId != null" >
+        #{uId,jdbcType=VARCHAR},
+      </if>
+      <if test="uName != null" >
+        #{uName,jdbcType=VARCHAR},
+      </if>
+      <if test="uAge != null" >
+        #{uAge,jdbcType=DECIMAL},
+      </if>
+      <if test="uPhone != null" >
+        #{uPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="uMail != null" >
+        #{uMail,jdbcType=VARCHAR},
+      </if>
+      <if test="uConstellation != null" >
+        #{uConstellation,jdbcType=VARCHAR},
+      </if>
+      <if test="uCity != null" >
+        #{uCity,jdbcType=VARCHAR},
+      </if>
+      <if test="uLogInTime != null" >
+        #{uLogInTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uLogInLocation != null" >
+        #{uLogInLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="uJoinDate != null" >
+        #{uJoinDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uCancellationTime != null" >
+        #{uCancellationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uSpecialty != null" >
+        #{uSpecialty,jdbcType=VARCHAR},
+      </if>
+      <if test="uHeadPortrait != null" >
+        #{uHeadPortrait,jdbcType=VARCHAR},
+      </if>
+      <if test="uAutograph != null" >
+        #{uAutograph,jdbcType=VARCHAR},
+      </if>
+      <if test="uEffective != null" >
+        #{uEffective,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+</mapper>

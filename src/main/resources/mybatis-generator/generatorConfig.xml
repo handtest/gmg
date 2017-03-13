@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+    <!DOCTYPE generatorConfiguration    
+      PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"    
+      "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">    
+    <generatorConfiguration>    
+    <!-- 数据库驱动-->    
+        <classPathEntry  location="C:/Users/Administrator/Documents/folder/Package/ojdbc6.jar"/>  
+        <context id="DB1Tables"  targetRuntime="MyBatis3">    
+            <commentGenerator>    
+                <property name="suppressDate" value="true"/>    
+                <!-- 是否去除自动生成的注释 true：是 ： false:否 -->    
+                <property name="suppressAllComments" value="true"/>    
+            </commentGenerator>    
+            <!--数据库链接URL，用户名、密码 -->    
+            <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:ORCL" userId="gmg" password="gmg123">    
+            </jdbcConnection>    
+            <javaTypeResolver>    
+                <property name="forceBigDecimals" value="false"/>    
+            </javaTypeResolver>    
+            <!-- 生成模型的包名和位置-->    
+            <javaModelGenerator targetPackage="eac.core.evaluate.model" targetProject="C:/Users/Administrator/workspace/gmg/src/main/java">    
+                <property name="enableSubPackages" value="true"/>    
+                <property name="trimStrings" value="true"/>    
+            </javaModelGenerator>    
+            <!-- 生成映射文件的包名和位置-->    
+            <sqlMapGenerator targetPackage="mapper/evaluate" targetProject="C:/Users/Administrator/workspace/gmg/src/main/resources">    
+                <property name="enableSubPackages" value="true"/>    
+            </sqlMapGenerator>    
+            <!-- 生成DAO的包名和位置-->    
+            <javaClientGenerator type="XMLMAPPER" targetPackage="eac.core.evaluate.mapper" targetProject="C:/Users/Administrator/workspace/gmg/src/main/java">    
+                <property name="enableSubPackages" value="true"/>    
+            </javaClientGenerator>    
+            <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->    
+            <table tableName="EVALUATE" domainObjectName="Evaluate" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>  
+        </context>  
+        <context id="DB2Tables"  targetRuntime="MyBatis3">    
+            <commentGenerator>    
+                <property name="suppressDate" value="true"/>    
+                <!-- 是否去除自动生成的注释 true：是 ： false:否 -->    
+                <property name="suppressAllComments" value="true"/>    
+            </commentGenerator>    
+            <!--数据库链接URL，用户名、密码 -->    
+            <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:ORCL" userId="gmg" password="gmg123">    
+            </jdbcConnection>    
+            <javaTypeResolver>    
+                <property name="forceBigDecimals" value="false"/>    
+            </javaTypeResolver>    
+            <!-- 生成模型的包名和位置-->    
+            <javaModelGenerator targetPackage="eac.core.friend.model" targetProject="C:/Users/Administrator/workspace/gmg/src/main/java">    
+                <property name="enableSubPackages" value="true"/>    
+                <property name="trimStrings" value="true"/>    
+            </javaModelGenerator>    
+            <!-- 生成映射文件的包名和位置-->    
+            <sqlMapGenerator targetPackage="mapper/friend" targetProject="C:/Users/Administrator/workspace/gmg/src/main/resources">    
+                <property name="enableSubPackages" value="true"/>    
+            </sqlMapGenerator>    
+            <!-- 生成DAO的包名和位置-->    
+            <javaClientGenerator type="XMLMAPPER" targetPackage="eac.core.friend.mapper" targetProject="C:/Users/Administrator/workspace/gmg/src/main/java">    
+                <property name="enableSubPackages" value="true"/>    
+            </javaClientGenerator>    
+            <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->    
+            <table tableName="FRIEND" domainObjectName="Friend" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>  
+        </context>  
+        <context id="DB3Tables"  targetRuntime="MyBatis3">    
+            <commentGenerator>    
+                <property name="suppressDate" value="true"/>    
+                <!-- 是否去除自动生成的注释 true：是 ： false:否 -->    
+                <property name="suppressAllComments" value="true"/>    
+            </commentGenerator>    
+            <!--数据库链接URL，用户名、密码 -->    
+            <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:ORCL" userId="gmg" password="gmg123">    
+            </jdbcConnection>    
+            <javaTypeResolver>    
+                <property name="forceBigDecimals" value="false"/>    
+            </javaTypeResolver>    
+            <!-- 生成模型的包名和位置-->    
+            <javaModelGenerator targetPackage="eac.core.group.model" targetProject="C:/Users/Administrator/workspace/gmg/src/main/java">    
+                <property name="enableSubPackages" value="true"/>    
+                <property name="trimStrings" value="true"/>    
+            </javaModelGenerator>    
+            <!-- 生成映射文件的包名和位置-->    
+            <sqlMapGenerator targetPackage="mapper/group" targetProject="C:/Users/Administrator/workspace/gmg/src/main/resources">    
+                <property name="enableSubPackages" value="true"/>    
+            </sqlMapGenerator>    
+            <!-- 生成DAO的包名和位置-->    
+            <javaClientGenerator type="XMLMAPPER" targetPackage="eac.core.group.mapper" targetProject="C:/Users/Administrator/workspace/gmg/src/main/java">    
+                <property name="enableSubPackages" value="true"/>    
+            </javaClientGenerator>    
+            <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->    
+            <table tableName="GROUPING" domainObjectName="Group" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>  
+        </context> 
+        <context id="DB4Tables"  targetRuntime="MyBatis3">    
+            <commentGenerator>    
+                <property name="suppressDate" value="true"/>    
+                <!-- 是否去除自动生成的注释 true：是 ： false:否 -->    
+                <property name="suppressAllComments" value="true"/>    
+            </commentGenerator>    
+            <!--数据库链接URL，用户名、密码 -->    
+            <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:ORCL" userId="gmg" password="gmg123">    
+            </jdbcConnection>    
+            <javaTypeResolver>    
+                <property name="forceBigDecimals" value="false"/>    
+            </javaTypeResolver>    
+            <!-- 生成模型的包名和位置-->    
+            <javaModelGenerator targetPackage="eac.core.user.model" targetProject="C:/Users/Administrator/workspace/gmg/src/main/java">    
+                <property name="enableSubPackages" value="true"/>    
+                <property name="trimStrings" value="true"/>    
+            </javaModelGenerator>    
+            <!-- 生成映射文件的包名和位置-->    
+            <sqlMapGenerator targetPackage="mapper/user" targetProject="C:/Users/Administrator/workspace/gmg/src/main/resources">    
+                <property name="enableSubPackages" value="true"/>    
+            </sqlMapGenerator>    
+            <!-- 生成DAO的包名和位置-->    
+            <javaClientGenerator type="XMLMAPPER" targetPackage="eac.core.user.mapper" targetProject="C:/Users/Administrator/workspace/gmg/src/main/java">    
+                <property name="enableSubPackages" value="true"/>    
+            </javaClientGenerator>    
+            <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->    
+            <table tableName="PERSON" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>  
+        </context>
+        <context id="DB5Tables"  targetRuntime="MyBatis3">    
+            <commentGenerator>    
+                <property name="suppressDate" value="true"/>    
+                <!-- 是否去除自动生成的注释 true：是 ： false:否 -->    
+                <property name="suppressAllComments" value="true"/>    
+            </commentGenerator>    
+            <!--数据库链接URL，用户名、密码 -->    
+            <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:ORCL" userId="gmg" password="gmg123">    
+            </jdbcConnection>    
+            <javaTypeResolver>    
+                <property name="forceBigDecimals" value="false"/>    
+            </javaTypeResolver>    
+            <!-- 生成模型的包名和位置-->    
+            <javaModelGenerator targetPackage="eac.core.curriculum.model" targetProject="C:/Users/Administrator/workspace/gmg/src/main/java">    
+                <property name="enableSubPackages" value="true"/>    
+                <property name="trimStrings" value="true"/>    
+            </javaModelGenerator>    
+            <!-- 生成映射文件的包名和位置-->    
+            <sqlMapGenerator targetPackage="mapper/curriculum" targetProject="C:/Users/Administrator/workspace/gmg/src/main/resources">    
+                <property name="enableSubPackages" value="true"/>    
+            </sqlMapGenerator>    
+            <!-- 生成DAO的包名和位置-->    
+            <javaClientGenerator type="XMLMAPPER" targetPackage="eac.core.curriculum.mapper" targetProject="C:/Users/Administrator/workspace/gmg/src/main/java">    
+                <property name="enableSubPackages" value="true"/>    
+            </javaClientGenerator>    
+            <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->    
+            <table tableName="CURRICULUM" domainObjectName="Curriculum" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>  
+        </context>   
+    </generatorConfiguration>    
