@@ -1,0 +1,50 @@
+.label-contaner {
+    width: 334px;
+    background: #fff;
+    position: absolute;
+    z-index: 10;
+    top: 172px;
+    left: 125px;
+    padding: 8px;
+    border: 1px solid #d2d2d2;
+    -ms-box-shadow: 0px 2px 5px #ccc;
+    -webkit-box-shadow: 0px 2px 5px #ccc;
+    -moz-box-shadow: 0px 2px 5px #ccc;
+    box-shadow: 0px 2px 5px #ccc;
+}
+.lable-s {
+   width: 12px;
+height: 8px;
+position: absolute;
+margin-top: -16px;
+margin-left: -298px;
+}
+.label-tips {
+    color: #aeaeae;
+    font-size: 14px;
+    padding: 5px 0px 10px 0px;
+    width: 100%;
+}
+.label_ul {
+    overflow: auto;
+    max-height: 140px;
+}
+.label_ul li.current {
+    color: #16b998;
+    background: #f5f5f5;
+}
+.label_ul li {
+    font-size: 14px;
+    float: left;
+    cursor: pointer;
+    height: 28px;
+    line-height: 28px;
+    width: 50%;
+}
+.label_ul li > span {
+    width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
