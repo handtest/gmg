@@ -1,0 +1,112 @@
+.collect{
+	background: #fff;
+border: 1px solid #e5e5e5;
+width: 960px;
+margin: 0 auto;
+margin-top: 60px;
+margin-left: 332.5px;
+box-shadow: 0px 2px 4px #e8eaec;
+display: none;
+}
+
+.collect-title{
+	height: 72px;
+line-height: 72px;
+text-align: center;
+font-size: 18px;
+position: relative;
+border-bottom: 1px solid #e5e5e5;
+width: 100%;
+}
+
+.collect-a{
+	background: url("../../image/index.png");
+	cursor: pointer;
+width: 20px;
+top: 25px;
+height: 20px;
+position: absolute;
+background-position: -189px -194px;
+left: 40px;
+}
+
+.collect-main{
+	height: auto;
+position: relative;
+border-bottom: 1px solid #e5e5e5;
+width: 100%;
+}
+
+.collect-icon{
+	background: url("../../image/index.png") no-repeat -355px -193px;
+cursor: pointer;
+height: 25px;
+width: 25px;
+display: block;
+margin-bottom: 5px;
+margin-top: 6px;
+margin-left: 30px;
+}
+.collect-main-one{
+	width: 100%;
+}
+
+.collect-font{
+	width: 90%;
+margin-left: 10px;
+}
+.collect-name{
+	font-size: 14px;
+	width: 676px;
+height: 20px;
+}
+.collect-data{
+width: 80%;
+height: 34px;
+font-size: 12px;
+color: #999;
+line-height: 34px;
+}
+.collect-main ul{
+	float: left;
+	margin-bottom: 10px;
+}
+
+.collect-main ul li{
+	float: left;
+	margin-right: 40px;
+}
+
+.collect-text{
+	height: 50px;
+width: 100%;
+margin-top: 10px;
+font-size: 14px;
+}
+
+.collect-em{
+	display: block;
+height: 18px;
+width: 12px;
+float: left;
+padding-left: 20px;
+}
+.collect-zhan{
+	background: url("../../image/index.png") no-repeat -47px -193px;
+}
+.collect-pl{
+	background: url("../../image/index.png") no-repeat -80px -193px;
+}
+
+.collect-sc{
+	background: url("../../image/index.png") no-repeat -417px -63px;
+}
+
+.collect-rs{
+	background: url("../../image/index.png") no-repeat -80px -265px;
+}
+
+.collect-unline{
+	border-bottom: 1px solid #e5e5e5;
+	width: 100%;
+}

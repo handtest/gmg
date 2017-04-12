@@ -1,0 +1,109 @@
+.myTheme{
+	background: #fff;
+border: 1px solid #e5e5e5;
+width: 960px;
+margin: 0 auto;
+margin-top: 60px;
+margin-left: 332.5px;
+box-shadow: 0px 2px 4px #e8eaec;
+display: none;
+}
+
+.theme-title{
+	height: 72px;
+line-height: 72px;
+text-align: center;
+font-size: 18px;
+position: relative;
+border-bottom: 1px solid #e5e5e5;
+width: 100%;
+}
+
+.theme-a{
+	background: url("../../image/index.png");
+	cursor: pointer;
+width: 20px;
+top: 25px;
+height: 20px;
+position: absolute;
+background-position: -189px -194px;
+left: 40px;
+}
+
+.theme-main{
+	height: auto;
+position: relative;
+border-bottom: 1px solid #e5e5e5;
+width: 100%;
+}
+
+.th-icon{
+	background: url("../../image/index.png") no-repeat -116px -198px;
+	cursor: pointer;
+	height: 9px;
+width: 16px;
+display: block;
+margin-bottom: 5px;
+}
+.theme-main-one{
+	width: 100%;
+}
+
+.theme-font{
+	width: 90%;
+margin-left: 10px;
+}
+.u-name{
+	font-size: 14px;
+font-weight: bold;
+}
+.theme-data{
+	width: 100%;
+height: 20px;
+font-size: 12px;
+color: #999;
+line-height: 20px;
+}
+.theme-main ul{
+	float: left;
+	margin-bottom: 10px;
+}
+
+.theme-main ul li{
+	float: left;
+	margin-right: 40px;
+}
+
+.theme-text{
+	height: 50px;
+width: 100%;
+margin-top: 10px;
+font-size: 14px;
+}
+
+.theme-em{
+	display: block;
+height: 18px;
+width: 12px;
+float: left;
+padding-left: 20px;
+}
+.theme-zhan{
+	background: url("../../image/index.png") no-repeat -47px -193px;
+}
+.theme-pl{
+	background: url("../../image/index.png") no-repeat -80px -193px;
+}
+
+.theme-sc{
+	background: url("../../image/index.png") no-repeat -417px -63px;
+}
+
+.theme-rs{
+	background: url("../../image/index.png") no-repeat -80px -265px;
+}
+
+.theme-unline{
+	border-bottom: 1px solid #e5e5e5;
+	width: 100%;
+}
